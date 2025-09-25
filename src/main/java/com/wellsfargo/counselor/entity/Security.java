@@ -19,17 +19,23 @@ public class Security {
     private String category;
 
     @Column(nullable = false)
-    private String purchasePrice;
+    private float purchasePrice;
 
     @Column(nullable = false)
     private String purchaseDate;
 
     @Column(nullable = false)
-    private int quantity;
+    private float quantity;
 
     // Constructor
     protected Security() {}
-    public Security(Portfolio portfolio, String name, String category, String purchasePrice, String purchaseDate, int quantity) {
+    public Security(
+            Portfolio portfolio,
+            String name,
+            String category,
+            float purchasePrice,
+            String purchaseDate,
+            float quantity) {
         this.portfolio = portfolio;
         this.name = name;
         this.category = category;
@@ -46,10 +52,10 @@ public class Security {
     public void setName(String name) {this.name = name;}
     public String getCategory() {return category;}
     public void setCategory(String category) {this.category = category;}
-    public String getPurchasePrice() {return purchasePrice;}
-    public void setPurchasePrice(String purchasePrice) {this.purchasePrice = purchasePrice;}
+    public float getPurchasePrice() {return purchasePrice;}
+    public void setPurchasePrice(float purchasePrice) {this.purchasePrice = purchasePrice;}
     public String getPurchaseDate() {return purchaseDate;}
     public void setPurchaseDate(String purchaseDate) {this.purchaseDate = purchaseDate;}
-    public int getQuantity() {return quantity;}
-    public void setQuantity(int quantity) {this.quantity = quantity;}
+    public float getQuantity() {return quantity;}
+    public void setQuantity(float quantity) {this.quantity = quantity;}
 }
